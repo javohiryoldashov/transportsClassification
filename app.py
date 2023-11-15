@@ -8,9 +8,9 @@ plt = platform.system()
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 #title
-st.title('Three type of vhicl classification')
+st.title('Three type of vehicle classification')
 
-file = st.file_uploader('Rasm yuklash', type=['png', 'jpg', 'jpeg', 'gif', 'svg'])
+file = st.file_uploader('Upload image here', type=['png', 'jpg', 'jpeg', 'gif', 'svg'])
 if file:
     st.image(file)
     img = PILImage.create(file)

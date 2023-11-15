@@ -5,10 +5,7 @@ import plotly.express as px
 import platform
 
 plt = platform.system()
-if plt == 'Linux':
-    pathlib.WindowsPath = pathlib.PosixPath 
-if plt == 'Windows':
-    pathlib.PosixPath = pathlib.WindowsPath
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath 
 #title
 st.title('Three type of vehicle classification')
 

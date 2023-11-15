@@ -2,10 +2,13 @@ import streamlit as st
 from fastai.vision.all import *
 import pathlib
 import plotly.express as px
-#import platform
+import platform
 
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+plt = platform.system()
+if plt == 'Linux':
+    pathlib.WindowsPath = pathlib.PosixPath 
+if plt == 'Windows':
+    pathlib.PosixPath = pathlib.WindowsPath
 #title
 st.title('Three type of vehicle classification')
 

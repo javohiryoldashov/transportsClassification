@@ -21,7 +21,7 @@ if file:
     pred, pred_id, probs = model.predict(img)
 
     st.success(pred)
-    st.info(f'Extimolik: {probs[pred_id]*100:.1f}')
+    st.info(f'Probability: {probs[pred_id]*100:.1f}')
 
     fig = px.bar(x = probs*100, y = model.dls.vocab)
     st.plotly_chart(fig)

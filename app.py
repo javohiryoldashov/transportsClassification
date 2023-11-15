@@ -6,8 +6,6 @@ import platform
 
 plt = platform.system() 
 if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
 #title
 st.title('Three type of vehicle classification')
 
